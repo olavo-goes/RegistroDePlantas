@@ -4,27 +4,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let stream = null;
   let video = null;
-  let usandoFrontal = true;
 
   async function iniciarCamera() {
     try {
-      const modo = usandoFrontal ? 'user' : 'environment';
-
       stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: modo }
-      });
-
+  video: { facingMode: 'environment' }
+});
       video = document.createElement('video');
       video.srcObject = stream;
-      video.autoplay = true;
-      video.playsInline = true;
+      video.setAttribute('autoplay', '');
+      video.setAttribute('playsinline', '');
       video.style.width = '100%';
       video.style.borderRadius = '8px';
-
       fotoPreview.innerHTML = '';
       fotoPreview.appendChild(video);
-
-      await video.play();
+      video.play();
     } catch (error) {
       console.error('Erro ao acessar a câmera:', error);
     }
@@ -49,8 +43,6 @@ window.addEventListener('DOMContentLoaded', () => {
     stream.getTracks().forEach(track => track.stop());
     stream = null;
     video = null;
-
-    usandoFrontal = !usandoFrontal;
   }
 
   cameraTrigger.addEventListener('click', () => {
