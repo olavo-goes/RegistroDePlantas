@@ -117,3 +117,15 @@ output img {
     width: 80px;
   }
 }
+
+.secao-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#inputNome {
+  box-sizing: border-box;
+}
+
+
