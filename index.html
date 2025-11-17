@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Plantas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="/images/camera_256.png" sizes="256x256" />
+  <meta name="theme-color" content="white" />
+</head>
+<body class="fullscreen">
+  <header class="cabecalho">
+    <h1>🌿 Registro de Plantas</h1>
+  </header>
+
+  <main class="conteudo">
+    <section class="secao-formulario">
+      <input type="text" id="inputNome" placeholder="Nome da planta" required />
+
+      <div id="foto-preview" class="foto-preview"></div>
+
+      <div style="text-align: center; margin-top: 1rem;">
+        <button id="camera-trigger">Tirar Foto</button>
+        <button id="btnSalvar">Salvar</button>
+        <button id="btnListar">Listar</button>
+      </div>
+    </section>
+
+    <section class="secao-galeria">
+      <h2>Minhas plantas</h2>
+      <output></output>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2025 Olavo, Marina - Projeto PWA</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/db.js"></script>
+</body>
+</html>

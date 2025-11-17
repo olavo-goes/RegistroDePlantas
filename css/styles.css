@@ -1,0 +1,119 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f0fdf4;
+  color: #333;
+}
+
+
+.cabecalho {
+  background-color: #228b22;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cabecalho h1 {
+  font-size: 1.5rem;
+}
+
+.conteudo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.secao-formulario {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+#inputNome {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: #228b22;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  min-width: 120px;
+}
+
+button:hover {
+  background-color: #196619;
+}
+
+
+.foto-preview {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.foto-preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.secao-galeria h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+output img {
+  width: 100px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.rodape {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .cabecalho h1 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+
+  output img {
+    width: 80px;
+  }
+}
